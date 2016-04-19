@@ -1,0 +1,23 @@
+{
+  "name": "atom-jolie",
+  "description": "A collection of tools for developing Jolie code in the Atom editor",
+  "version": "0.1.0",
+  "main": "./lib/main",
+  "dependencies": {
+    "atom-package-deps": "^2.0.1"
+  },
+  "package-deps": [
+    "language-jolie",
+    "linter-jolie",
+    "script"
+  ],
+  "homepage": "https://github.com/fmontesi/atom-jolie",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fmontesi/atom-jolie.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fmontesi/atom-jolie/issues"
+  }
+}
