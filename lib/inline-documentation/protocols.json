@@ -1,0 +1,42 @@
+{"protocols": [
+		{
+			"name":"http",
+			"link":"/protocols/http.html",
+			"text":"HTTP Protocol HTTP (Hypertext Transfer Protocol) is an application protocol for distributed, collaborative, hypermedia information systems. Protocol name in Jolie port definition: 'http'."
+		},
+		{
+			"name":"https",
+			"link":"/protocols/https.html",
+			"text":"HTTPS (HTTP Secure) is a secure communication protocol obtained by layering the HTTP protocol on top of the SSL/TSL protocol. Protocol name in Jolie port definition: https."
+		},
+		{
+			"name":"jsonrpc",
+			"link":"/protocols/jsonrpc.html",
+			"text":"JSON-RPC is a remote procedure call protocol encoded in JSON (JavaScript Object Notation). Jolie implements version 2 over HTTP transport. Protocol name in Jolie port definition: jsonrpc."
+		},
+		{
+			"name":"xmlrpc",
+			"link":"/protocols/xmlrpc.html",
+			"text":"XML-RPC is a remote procedure call protocol encoded in XML (Extensible Markup Language). Protocol name in port definition: xmlrpc."
+		},
+		{
+			"name":"soap",
+			"link":"/protocols/soap.html",
+			"text":"SOAP (Simple Object Access Protocol) is a protocol for exchanging structured information among Web Services. It relies on XML for its message format. Protocol name in port definition: soap."
+		},
+		{
+			"name":"sodep",
+			"link":"/protocols/sodep.html",
+			"text":"SODEP (Simple Operation Data Exchange Protocol) is a binary protocol created and developed for Jolie, in order to provide a simple, safe and efficient protocol for service communications. Protocol name in port definition: sodep."
+		},
+		{
+			"name":"sodeps",
+			"link":"/protocols/sodeps.html",
+			"text":"SODEPS (SODEP Secure) is a secure communication protocol obtained by layering the SODEP protocol on top of the SSL/TSL protocol. Protocol name in Jolie port definition: sodeps."
+		},
+		{
+			"name":"ssl",
+			"link":"/protocols/ssl.html",
+			"text":"SSL (Secure Sockets Layer) is not a communication protocol on its own and it is used as a wrapping for SSL-based secure protocols, like SODEPS and HTTPS."
+		}
+] }

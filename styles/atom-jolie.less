@@ -1,0 +1,95 @@
+
+@import "ui-variables";
+@import "syntax-variables";
+@import "./message.less";
+
+@margin: 16px;
+
+.jolie-docs-view {
+  padding: 20px;
+  font-size: 14px;
+  overflow: scroll;
+
+  p,
+  blockquote,
+  ul, ol, dl,
+  table,
+  pre {
+    margin-top: 0;
+    margin-bottom: @margin;
+  }
+
+  blockquote, pre {
+    color: @text-color-highlight;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  }
+
+  hr {
+    border-top: 1px solid @inset-panel-background-color;
+  }
+
+  a {
+    color: @text-color-info;
+  }
+
+  atom-text-editor {
+    margin-top: 0;
+    margin-bottom: @margin;
+    padding: 10px;
+    background-color: @input-background-color;
+    border-radius:5px 5px 5px 5px;
+  }
+  .header {
+
+    // .header-hr(@color) {
+    //   border-top: 1px solid darken(@color, 5%);
+    // }
+    // .header-title(@color) {
+    //   background-color: darken(@color, 5%);
+    // }
+    // .header-a(@color) {
+    //   color: darken(@color, 5%);
+    // }
+
+    hr {
+      margin-bottom: 0px;
+      clear: both;
+      border-top: 1px solid @inset-panel-background-color;
+      // &.color-blue { .header-hr(@background-color-info); }
+      // &.color-yellow {.header-hr(@background-color-warning); }
+      // &.color-red { .header-hr(@background-color-error);  }
+      // &.color-green { .header-hr(@background-color-success); }
+
+    }
+
+    a {
+      font-size: 12px;
+      margin-top: 19px;
+      color: @text-color-subtle;
+      // &.color-blue { .header-a(@background-color-info); }
+      // &.color-yellow {.header-a(@background-color-warning); }
+      // &.color-red { .header-a(@background-color-error);  }
+      // &.color-green { .header-a(@background-color-success); }
+    }
+
+    .badge-docs {
+      padding: 4px 8px;
+      border-radius: 2px;
+      color: @text-color-highlight;
+      background-color: @background-color-highlight;
+      margin-bottom: 10px;
+      // &.color-blue { .header-title(@background-color-info); }
+      // &.color-yellow {.header-title(@background-color-warning); }
+      // &.color-red { .header-title(@background-color-error);  }
+      // &.color-green { .header-title(@background-color-success); }
+    }
+  }
+}
+
+atom-text-editor::shadow .editor-contents--private .highlight.keyclick > .region {
+  border-bottom: 1px solid @syntax-text-color;
+}
+
+atom-text-editor:not([mini]).keyclick::shadow .editor-contents--private {
+  cursor: pointer;
+}
