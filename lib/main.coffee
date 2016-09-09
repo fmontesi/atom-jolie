@@ -29,9 +29,6 @@ module.exports = AtomJolie =
     @docsProvider = new JolieDocsProvider
     @messageProvider = new MessageProvider
 
-    #__dirname - the name of the directory that the currently executing script resides in.
-    @projectPath = __dirname
-
   deactivate: ->
     @docsProvider.dispose()
     @docsProvider = null

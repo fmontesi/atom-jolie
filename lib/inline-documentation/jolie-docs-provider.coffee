@@ -2,7 +2,7 @@
 {getWord} = require './lookup'
 AtomJolie = require '../main'
 url = require 'url'
-fs = require 'fs'
+request = require 'request'
 
 JolieDocsView = null
 
@@ -42,12 +42,10 @@ class JolieDocsProvider
     @addViewForElement(word, link)
 
   addViewForElement: (word, link) ->
-    docsPath = AtomJolie.projectPath + "/inline-documentation/documentation/" + link.slice(0,-4) + "md"
-    foo = ->
-      fs.readFileSync docsPath, 'utf8'
-    result = foo()
-    uri = "atom-jolie://jolie-docs-views/#{word}"
-    options = {searchAllPanes: true, split: 'right'}
+    docsPath = "https://raw.githubusercontent.com/jolie/docs/master/documentation/" + link.slice(0,-4) + "md"
 
-    atom.workspace.open(uri, options).then (jolieDocsView) =>
-      jolieDocsView.setSource(result)
+    request.get (docsPath), (err, r, body) ->
+      uri = "atom-jolie://jolie-docs-views/#{word}"
+      options = {searchAllPanes: true, split: 'right'}
+      atom.workspace.open(uri, options).then (jolieDocsView) =>
+        jolieDocsView.setSource(body)

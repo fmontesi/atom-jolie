@@ -2,8 +2,6 @@
 Message = require './message-model'
 {getWord, getDocumentation} = require './lookup'
 AtomJolie = require '../main'
-fs = require 'fs'
-
 
 module.exports =
 class MessageProvider
@@ -104,7 +102,6 @@ class MessageProvider
     lineHeight = @lineHeightEm * @fontSizePx
 
   addMessage: ({name, range, text, badge, link}) ->
-
     color = atom.config.get('atom-jolie.messageColor').toLowerCase()
     showBadge = atom.config.get 'atom-jolie.showBadge'
     unless badge?
@@ -127,7 +124,6 @@ class MessageProvider
     position = editor.getCursorBufferPosition()
     object = getDocumentation(editor, position)
     if object?
-      docsPath = AtomJolie.projectPath + "/inline-documentation/documentation/" + object.link.slice(0,-4) + "md"
       @addMessage
         name: object.word
         range: object.range
