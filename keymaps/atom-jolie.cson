@@ -1,0 +1,2 @@
+'atom-text-editor:not([mini])[data-grammar="source jolie"]':
+  'f2': 'atom-jolie:show-jolie-inline-docs'
